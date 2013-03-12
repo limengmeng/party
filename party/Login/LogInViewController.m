@@ -3,7 +3,7 @@
 //  party
 //
 //  Created by yilinlin on 13-1-29.
-//
+//郭江伟
 //
 
 #import "LogInViewController.h"
