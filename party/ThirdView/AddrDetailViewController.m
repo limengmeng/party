@@ -231,7 +231,7 @@
         [cell.contentView addSubview:Acaddr];
         
         Acaddr.text=[self.dict objectForKey:@"C_LOCAL"];
-        [imageview setImageWithURL:[NSURL URLWithString:[self.dict objectForKey:@"C_PIC"]]refreshCache:NO placeholderImage:[UIImage imageNamed:@"placeholderImage@2x.png"]];
+        [imageview setImageWithURL:[NSURL URLWithString:[self.dict objectForKey:@"C_PIC"]]refreshCache:NO placeholderImage:[UIImage imageNamed:@"didian@2x.png"]];
         imageview.userInteractionEnabled=YES;
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
         [imageview addGestureRecognizer:singleTap];

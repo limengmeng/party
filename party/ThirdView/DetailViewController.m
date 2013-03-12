@@ -324,7 +324,7 @@ static NSString* P_type=@"activity";
         Achost.text=[dict objectForKey:@"C_HOST"];
         Aclabel.text=[dict objectForKey:@"C_LABEL"];
         NSURL* url=[NSURL URLWithString:[dict objectForKey:@"C_PIC"]];
-        [imageview setImageWithURL: url refreshCache:NO placeholderImage:[UIImage imageNamed:@"placeholderImage@2x.png"]];
+        [imageview setImageWithURL: url refreshCache:NO placeholderImage:[UIImage imageNamed:@"huodong@2x.png"]];
         imageview.userInteractionEnabled=YES;
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
         [imageview addGestureRecognizer:singleTap];
