@@ -9,6 +9,8 @@
 #import "thirdViewController.h"
 #import "ASIHTTPRequest.h"
 #import "SDImageView+SDWebCache.h"
+#define returntotal 5
+
 @implementation thirdViewController
 @synthesize tableview;
 @synthesize actsumarray;
@@ -48,7 +50,7 @@
     grayRC.backgroundImage=[UIImage imageNamed:@"segment@2x.png"];
     grayRC.height = 30;// 强制高度  一般可以用于全是图片的选项
     [super viewWillAppear:animated];
-
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -71,7 +73,7 @@
     self.tableview.dataSource=self;
     self.tableview.backgroundView=nil;
     self.tableview.backgroundColor=[UIColor colorWithRed:248.0/255 green:248.0/255 blue:248.0/255 alpha:1];
-   
+    
     [self.view addSubview:self.tableview];
     NSMutableArray* list=[[NSMutableArray alloc]init];
     self.actsumarray=list;
@@ -80,7 +82,7 @@
     self.addrarray=addrlist;
     [addrlist release];
     [table release];
-
+    
     
     //===================活动和地点选择按钮==============================================
     grayRC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"活动",@"地点", nil]];
@@ -99,7 +101,7 @@
     segment=0;
     flag=0;
     //接口IF00028
-    NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00028?uuid=%@",userUUid];
+    NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00028?uuid=%@&&from=1&&to=5",userUUid];
     NSLog(@"获取活动列表,接口28:%@",stringUrl);
     NSURL* url=[NSURL URLWithString:stringUrl];
     
@@ -110,7 +112,7 @@
     [request setDefaultResponseEncoding:NSUTF8StringEncoding];
     [request setDidFailSelector:@selector(requestDidFailed:)];
     [request startAsynchronous];
-
+    
     UIBarButtonItem *segmentBar=[[UIBarButtonItem alloc] initWithCustomView:grayRC];
     self.navigationItem.leftBarButtonItem=segmentBar;
     grayRC.center = CGPointMake(160, 270);
@@ -126,9 +128,9 @@
 -(void)requestDidFailed:(ASIHTTPRequest *)request
 {
     NSLog(@"wang luo bu gei li");
-//    UIAlertView *soundAlert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络不给力，没有获取到数据" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//    [soundAlert show];
-//    [soundAlert release];
+    //    UIAlertView *soundAlert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络不给力，没有获取到数据" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    //    [soundAlert show];
+    //    [soundAlert release];
 }
 -(void)requestFinished:(ASIHTTPRequest *)request
 {
@@ -141,19 +143,19 @@
     total=[[bizDic objectForKey:@"total"]intValue];
     //选择的是活动列表，segment=0
     if (segment==0) {
-            if (flag==0) {
-                [self.actsumarray removeAllObjects];
+        if (flag==0) {
+            [self.actsumarray removeAllObjects];
         }
         [self.actsumarray addObjectsFromArray:[bizDic objectForKey:@"collects"]];
         NSLog(@"%@",self.actsumarray);
-        }
+    }
     //选择的是地点列表，segment=1
     else
     {
         if (flag==0) {
             [self.addrarray removeAllObjects];
         }
-
+        
         [self.addrarray addObjectsFromArray:[bizDic objectForKey:@"collects"]];
         NSLog(@"%@",self.addrarray);
     }
@@ -171,7 +173,7 @@
     self.userUUid=stringUUID;
 }
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl {
-     [[ASIHTTPRequest sharedQueue] cancelAllOperations];
+    [[ASIHTTPRequest sharedQueue] cancelAllOperations];
     //中断之前的网络请求
 	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedIndex);
     flag=0;
@@ -181,7 +183,7 @@
         flag=0;
         [self.tableview reloadData];
         
-        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00029?uuid=%@",userUUid];
+        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00029?uuid=%@&&from=1&&to=5",userUUid];
         NSLog(@"获取热门地点列表,接口29:%@",stringUrl);
         NSURL* url=[NSURL URLWithString:stringUrl];
         
@@ -199,7 +201,7 @@
         [self.tableview reloadData];
         flag=0;
         //接口IF00028
-        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00028?uuid=%@",userUUid];
+        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00028?uuid=%@&&from=1&&to=5",userUUid];
         NSLog(@"获取活动列表,接口28:%@",stringUrl);
         NSURL* url=[NSURL URLWithString:stringUrl];
         
@@ -219,12 +221,12 @@
         UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
         if (!cell){
             cell=[[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"]autorelease];
-       }
+        }
         for (UIView *views in cell.contentView.subviews)
-       {
-           [views removeFromSuperview];
-       }
-    
+        {
+            [views removeFromSuperview];
+        }
+        
         cell.backgroundView=[[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"huodongkuang@2x.png"]]autorelease];
         
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
@@ -297,7 +299,7 @@
         label.textColor=[UIColor whiteColor];
         [cell.contentView addSubview:label];
         [label release];
-
+        
         fnum=[[UILabel alloc]initWithFrame:CGRectMake(190, 177, 50, 21)];
         fnum.backgroundColor=[UIColor clearColor];
         fnum.font=[UIFont systemFontOfSize:17.0];
@@ -343,23 +345,23 @@
         [title release];
         
         
-    NSDictionary* dict=[self.actsumarray objectAtIndex:indexPath.section];
-    NSLog(@"%@",dict);
-    pnum.text=[NSString stringWithFormat:@"%@",[dict objectForKey:@"C_PNUM"]];
-    title.text=[dict objectForKey:@"C_TITLE"];
-    label.text=[dict objectForKey:@"C_LABEL"];
-    host.text=[dict objectForKey:@"C_HOST"];
-    addr.text=[dict objectForKey:@"C_LOCAL"];
-    
-    NSURL* url=[NSURL URLWithString:[dict objectForKey:@"C_PIC"]];
-    
-    //cell.imageview.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
-    [imageview setImageWithURL: url refreshCache:NO placeholderImage:[UIImage imageNamed:@"placeholderImage@2x.png"]];
-    time.text=[dict objectForKey:@"C_STIME"];
-    fnum.text=[NSString stringWithFormat:@"%@",[dict objectForKey:@"C_FNUM"]];
-    return cell;
-
-}
+        NSDictionary* dict=[self.actsumarray objectAtIndex:indexPath.section];
+        NSLog(@"%@",dict);
+        pnum.text=[NSString stringWithFormat:@"%@",[dict objectForKey:@"C_PNUM"]];
+        title.text=[dict objectForKey:@"C_TITLE"];
+        label.text=[dict objectForKey:@"C_LABEL"];
+        host.text=[dict objectForKey:@"C_HOST"];
+        addr.text=[dict objectForKey:@"C_LOCAL"];
+        
+        NSURL* url=[NSURL URLWithString:[dict objectForKey:@"C_PIC"]];
+        
+        //cell.imageview.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+        [imageview setImageWithURL: url refreshCache:NO placeholderImage:[UIImage imageNamed:@"huodong@2x.png"]];
+        time.text=[dict objectForKey:@"C_STIME"];
+        fnum.text=[NSString stringWithFormat:@"%@",[dict objectForKey:@"C_FNUM"]];
+        return cell;
+        
+    }
     else
     {
         UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -407,7 +409,7 @@
         partynum.textColor=[UIColor colorWithRed:239.0/255 green:105.0/255 blue:87.0/255 alpha:1];
         [cell.contentView addSubview:partynum];
         [partynum release];
-
+        
         imageview=[[UIImageView alloc]initWithFrame:CGRectMake(11, 6, 279, 174)];
         
         [cell.contentView addSubview:imageview];
@@ -451,7 +453,7 @@
         [fnumLabel release];
         NSDictionary* dict=[self.addrarray objectAtIndex:indexPath.section];
         NSURL* url=[NSURL URLWithString:[dict objectForKey:@"C_PIC"]];
-        [imageview setImageWithURL: url refreshCache:NO placeholderImage:[UIImage imageNamed:@"placeholderImage@2x.png"]];
+        [imageview setImageWithURL: url refreshCache:NO placeholderImage:[UIImage imageNamed:@"didian@2x.png"]];
         title.text=[dict objectForKey:@"C_TITLE"];
         partynum.text=[NSString stringWithFormat:@"%@",[dict objectForKey:@"C_PNUM"]];
         peoplenum.text=[NSString stringWithFormat:@"%@",[dict objectForKey:@"C_FNUM"]];
@@ -459,18 +461,20 @@
         label.text=[dict objectForKey:@"C_LABEL"];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         return cell;
-
+        
     }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (segment==0) {
-    NSDictionary* dict=[self.actsumarray objectAtIndex:indexPath.section];
-    detail=[[DetailViewController alloc]init];
-    detail.C_id=[dict objectForKey:@"C_ID"];
-    [self.navigationController pushViewController:detail animated:YES];
-    
+        NSDictionary* dict=[self.actsumarray objectAtIndex:indexPath.section];
+        detail=[[DetailViewController alloc]init];
+        detail.C_id=[dict objectForKey:@"C_ID"];
+        [self.navigationController pushViewController:detail animated:YES];
+        [detail release];
+        detail=nil;
+        
     }
     else
     {
@@ -478,7 +482,9 @@
         addrdetail=[[AddrDetailViewController alloc]init];
         addrdetail.C_id=[dict objectForKey:@"C_ID"];
         [self.navigationController pushViewController:addrdetail animated:YES];
-
+        [addrdetail release];
+        addrdetail=nil;
+        
     }
 }
 - (void)viewDidUnload
@@ -544,7 +550,7 @@
             UIButton* morebutton=[UIButton buttonWithType:UIButtonTypeCustom];
             morebutton.frame=CGRectMake(57, 20, 206, 32);
             [morebutton setImage:[UIImage imageNamed:@"searchMore@2x.png"] forState:UIControlStateNormal];
-            [morebutton addTarget:self action:@selector(ACTclickmore) forControlEvents:UIControlEventTouchDown];
+            [morebutton addTarget:self action:@selector(ADDRclickmore) forControlEvents:UIControlEventTouchDown];
             [footerview addSubview:morebutton];
             return footerview;
         }
@@ -558,7 +564,7 @@
 {
     //接口28，需要from and to
     flag=1;
-    if (total<mytotal) {
+    if (total<returntotal) {
         NSLog(@"已经是全部");
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"加载完毕" message:@"所有数据已经加载完毕" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles: nil];
         [alert show];
@@ -566,7 +572,9 @@
     }
     else
     {
-        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00028?uuid=%@&&from=%d",userUUid,[self.actsumarray count]+1];
+        int from=[self.actsumarray count]+1;
+        int to=from+4;
+        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00028?uuid=%@&&from=%d&&to=%d",userUUid,from,to];
         NSLog(@"获取活动列表,接口28:%@",stringUrl);
         NSLog(@"加载更多:");
         NSURL* url=[NSURL URLWithString:stringUrl];
@@ -574,7 +582,7 @@
         [request setDelegate:self];
         [request startAsynchronous];
     }
-
+    
     
 }
 
@@ -582,15 +590,17 @@
 -(void)ADDRclickmore
 {
     flag=1;
-    if (total<mytotal) {
+    if (total<returntotal) {
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"加载完毕" message:@"所有数据已经加载完毕" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles: nil];
         [alert show];
         [alert release];
-
+        
     }
     else
     {
-        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00029?uuid=%@&&from=%d",userUUid,[self.addrarray count]+1];
+        int from=[self.actsumarray count]+1;
+        int to=from+4;
+        NSString *stringUrl=[NSString stringWithFormat:@"http://www.ycombo.com/che/mac/party/IF00029?uuid=%@&&from=%d&&to=%d",userUUid,from,to];
         NSLog(@"获取地点列表,接口29:%@",stringUrl);
         NSLog(@"加载更多:");
         NSURL* url=[NSURL URLWithString:stringUrl];
@@ -598,7 +608,7 @@
         [request setDelegate:self];
         [request startAsynchronous];
     }
-
+    
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -719,8 +729,8 @@
 {
     [tableview release];
     [actsumarray release];
-    [addrdetail release];
-    [detail release];
+    [addrarray release];
+    [userUUid release];
     [super dealloc];
     
 }
