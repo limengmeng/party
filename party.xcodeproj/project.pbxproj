@@ -266,6 +266,8 @@
 		DC98700116BE473700A934DD /* xitong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC986FF016BE473700A934DD /* xitong@2x.png */; };
 		DCA44A7616E1EE6400553EE2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA44A7516E1EE6400553EE2 /* Icon@2x.png */; };
 		DCA44A7816E1EE6900553EE2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA44A7716E1EE6900553EE2 /* Icon.png */; };
+		DCA72FE016EEF5C90017E2B4 /* huodong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA72FDE16EEF5C90017E2B4 /* huodong@2x.png */; };
+		DCA72FE116EEF5C90017E2B4 /* didian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA72FDF16EEF5C90017E2B4 /* didian@2x.png */; };
 		DCC8FC2916BE6C760044E24D /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8FBF216BE6C760044E24D /* MyAnnotation.m */; };
 		DCC8FC2A16BE6C760044E24D /* MyMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8FBF416BE6C760044E24D /* MyMapViewController.m */; };
 		DCC8FC2B16BE6C760044E24D /* Pdone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC8FBF616BE6C760044E24D /* Pdone@2x.png */; };
@@ -639,6 +641,8 @@
 		DC986FF016BE473700A934DD /* xitong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xitong@2x.png"; sourceTree = "<group>"; };
 		DCA44A7516E1EE6400553EE2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		DCA44A7716E1EE6900553EE2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DCA72FDE16EEF5C90017E2B4 /* huodong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huodong@2x.png"; sourceTree = "<group>"; };
+		DCA72FDF16EEF5C90017E2B4 /* didian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "didian@2x.png"; sourceTree = "<group>"; };
 		DCBC2CFC16E0B36F009B45CF /* firstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
 		DCC8FBF116BE6C760044E24D /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		DCC8FBF216BE6C760044E24D /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
@@ -1417,6 +1421,8 @@
 		DCF3B59C16B0DE8400955793 /* 异步加载图片 */ = {
 			isa = PBXGroup;
 			children = (
+				DCA72FDE16EEF5C90017E2B4 /* huodong@2x.png */,
+				DCA72FDF16EEF5C90017E2B4 /* didian@2x.png */,
 				DC97771F16DB131300C01CE5 /* placeholderImage@2x.png */,
 				DC9828DC16D5FA4A00A9E1DA /* SDImageView+SDWebCache.h */,
 				DC9828DD16D5FA4A00A9E1DA /* SDImageView+SDWebCache.m */,
@@ -1721,6 +1727,8 @@
 				52C4C8CD16ED6F5200F079D4 /* ycombosinaing@2x.png in Resources */,
 				52C4C8CE16ED6F5200F079D4 /* ycombouser@2x.png in Resources */,
 				52C4C8CF16ED6F5200F079D4 /* ycombopass@2x.png in Resources */,
+				DCA72FE016EEF5C90017E2B4 /* huodong@2x.png in Resources */,
+				DCA72FE116EEF5C90017E2B4 /* didian@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
