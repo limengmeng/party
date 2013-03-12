@@ -71,6 +71,8 @@
 		9D0756B216B927AB0059AFFA /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0756A916B927AB0059AFFA /* SinaWeibo.m */; };
 		9D0756B316B927AB0059AFFA /* SinaWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0756AC16B927AB0059AFFA /* SinaWeiboAuthorizeView.m */; };
 		9D0756B416B927AB0059AFFA /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0756AF16B927AB0059AFFA /* SinaWeiboRequest.m */; };
+		9D59C51616EEF06F0095FF52 /* write_infor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59C51316EEF06F0095FF52 /* write_infor.m */; };
+		9D59C51716EEF06F0095FF52 /* write_done.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59C51516EEF06F0095FF52 /* write_done.m */; };
 		9D9512DB16BD4F8B00C95C67 /* makeview1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9512C716BD4F8B00C95C67 /* makeview1@2x.png */; };
 		9D9512DC16BD4F8B00C95C67 /* MakeView2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9512C816BD4F8B00C95C67 /* MakeView2@2x.png */; };
 		9D9512DD16BD4F8B00C95C67 /* MakeView3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9512C916BD4F8B00C95C67 /* MakeView3@2x.png */; };
@@ -319,8 +321,6 @@
 		DCDEC7EA16BF5B9100C4A5A3 /* forthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDEC7E816BF5B9100C4A5A3 /* forthViewController.xib */; };
 		DCDED7E816BEBDE80038375A /* partyMesyes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDED7E416BEBDE80038375A /* partyMesyes@2x.png */; };
 		DCDED7E916BEBDE80038375A /* partyMesjoined@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDED7E516BEBDE80038375A /* partyMesjoined@2x.png */; };
-		DCDED7FF16BEBE870038375A /* write_infor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDED7F516BEBE870038375A /* write_infor.m */; };
-		DCDED80016BEBE870038375A /* write_done.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDED7F716BEBE870038375A /* write_done.m */; };
 		DCDED80116BEBE870038375A /* takePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDED7F916BEBE870038375A /* takePhoto.m */; };
 		DCF3B71016B163BB00955793 /* addrpic.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF3B70E16B163B300955793 /* addrpic.png */; };
 		DCF3B71116B163BB00955793 /* actipic.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF3B70F16B163B700955793 /* actipic.png */; };
@@ -406,6 +406,10 @@
 		9D0756AE16B927AB0059AFFA /* SinaWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboRequest.h; sourceTree = "<group>"; };
 		9D0756AF16B927AB0059AFFA /* SinaWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboRequest.m; sourceTree = "<group>"; };
 		9D1698E416BA010100DC4CDB /* MainHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHeader.h; sourceTree = "<group>"; };
+		9D59C51216EEF06F0095FF52 /* write_infor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_infor.h; sourceTree = "<group>"; };
+		9D59C51316EEF06F0095FF52 /* write_infor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = write_infor.m; sourceTree = "<group>"; };
+		9D59C51416EEF06F0095FF52 /* write_done.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_done.h; sourceTree = "<group>"; };
+		9D59C51516EEF06F0095FF52 /* write_done.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = write_done.m; sourceTree = "<group>"; };
 		9D9512C716BD4F8B00C95C67 /* makeview1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "makeview1@2x.png"; sourceTree = "<group>"; };
 		9D9512C816BD4F8B00C95C67 /* MakeView2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MakeView2@2x.png"; sourceTree = "<group>"; };
 		9D9512C916BD4F8B00C95C67 /* MakeView3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MakeView3@2x.png"; sourceTree = "<group>"; };
@@ -708,10 +712,6 @@
 		DCDEC7E816BF5B9100C4A5A3 /* forthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = forthViewController.xib; sourceTree = "<group>"; };
 		DCDED7E416BEBDE80038375A /* partyMesyes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partyMesyes@2x.png"; sourceTree = "<group>"; };
 		DCDED7E516BEBDE80038375A /* partyMesjoined@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partyMesjoined@2x.png"; sourceTree = "<group>"; };
-		DCDED7F416BEBE870038375A /* write_infor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_infor.h; sourceTree = "<group>"; };
-		DCDED7F516BEBE870038375A /* write_infor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = write_infor.m; sourceTree = "<group>"; };
-		DCDED7F616BEBE870038375A /* write_done.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_done.h; sourceTree = "<group>"; };
-		DCDED7F716BEBE870038375A /* write_done.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = write_done.m; sourceTree = "<group>"; };
 		DCDED7F816BEBE870038375A /* takePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = takePhoto.h; sourceTree = "<group>"; };
 		DCDED7F916BEBE870038375A /* takePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = takePhoto.m; sourceTree = "<group>"; };
 		DCF3B70E16B163B300955793 /* addrpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addrpic.png; sourceTree = "<group>"; };
@@ -865,12 +865,12 @@
 				52C4C89916ED6CF800F079D4 /* LogInViewController.m */,
 				DC9828F716D61FEC00A9E1DA /* login.h */,
 				DC9828F816D61FEC00A9E1DA /* login.m */,
+				9D59C51216EEF06F0095FF52 /* write_infor.h */,
+				9D59C51316EEF06F0095FF52 /* write_infor.m */,
+				9D59C51416EEF06F0095FF52 /* write_done.h */,
+				9D59C51516EEF06F0095FF52 /* write_done.m */,
 				DC9828F916D61FEC00A9E1DA /* resign.h */,
 				DC9828FA16D61FEC00A9E1DA /* resign.m */,
-				DCDED7F416BEBE870038375A /* write_infor.h */,
-				DCDED7F516BEBE870038375A /* write_infor.m */,
-				DCDED7F616BEBE870038375A /* write_done.h */,
-				DCDED7F716BEBE870038375A /* write_done.m */,
 				DCDED7F816BEBE870038375A /* takePhoto.h */,
 				DCDED7F916BEBE870038375A /* takePhoto.m */,
 				9DF697AA16BF601500F851CC /* FriendViewView.h */,
@@ -1761,8 +1761,6 @@
 				DCC8FC2916BE6C760044E24D /* MyAnnotation.m in Sources */,
 				DCC8FC2A16BE6C760044E24D /* MyMapViewController.m in Sources */,
 				DCC8FC6016BE6D810044E24D /* AciPartyViewController.m in Sources */,
-				DCDED7FF16BEBE870038375A /* write_infor.m in Sources */,
-				DCDED80016BEBE870038375A /* write_done.m in Sources */,
 				DCDED80116BEBE870038375A /* takePhoto.m in Sources */,
 				DCDEC7E916BF5B9100C4A5A3 /* forthViewController.m in Sources */,
 				9DF697AC16BF601500F851CC /* FriendViewView.m in Sources */,
@@ -1793,6 +1791,8 @@
 				52C4C88616ED6C3300F079D4 /* WelcomViewController.m in Sources */,
 				52C4C89816ED6C9A00F079D4 /* WelcomeViewController.m in Sources */,
 				52C4C89A16ED6CF800F079D4 /* LogInViewController.m in Sources */,
+				9D59C51616EEF06F0095FF52 /* write_infor.m in Sources */,
+				9D59C51716EEF06F0095FF52 /* write_done.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
