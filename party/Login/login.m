@@ -65,7 +65,7 @@
         
         //*****************************账号转换按钮*************************************
         self.button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.button1.frame=CGRectMake(178, 0, 93, 29);
+        self.button1.frame=CGRectMake(173, 0, 110, 29);
         self.button1.backgroundColor=[UIColor clearColor];
         [self.button1 setBackgroundImage:[UIImage imageNamed:@"zhuce@2x.png"] forState:UIControlStateNormal];
         [self addSubview:self.button1];

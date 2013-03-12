@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5227864C16EEFB3D00EC3239 /* denglu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227864A16EEFB3D00EC3239 /* denglu@2x.png */; };
+		5227864D16EEFB3D00EC3239 /* zhuce@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5227864B16EEFB3D00EC3239 /* zhuce@2x.png */; };
 		526BE92616E8414600D911C6 /* InvitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526BE92516E8414600D911C6 /* InvitViewController.m */; };
 		526BE92816E8418D00D911C6 /* MyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526BE92716E8418D00D911C6 /* MyDetailViewController.m */; };
 		526BE92A16E842F800D911C6 /* 4COMBORetinaIphone114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 526BE92916E842F800D911C6 /* 4COMBORetinaIphone114x114.png */; };
@@ -27,8 +29,6 @@
 		52C4C8B816ED6F5200F079D4 /* ycomboregister@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A016ED6F5200F079D4 /* ycomboregister@2x.png */; };
 		52C4C8B916ED6F5200F079D4 /* ycomboLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A116ED6F5200F079D4 /* ycomboLogin@2x.png */; };
 		52C4C8BA16ED6F5200F079D4 /* ycombologo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A216ED6F5200F079D4 /* ycombologo@2x.png */; };
-		52C4C8BB16ED6F5200F079D4 /* zhuce@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A316ED6F5200F079D4 /* zhuce@2x.png */; };
-		52C4C8BC16ED6F5200F079D4 /* denglu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A416ED6F5200F079D4 /* denglu@2x.png */; };
 		52C4C8BD16ED6F5200F079D4 /* quxiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A516ED6F5200F079D4 /* quxiao@2x.png */; };
 		52C4C8BE16ED6F5200F079D4 /* queding@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A616ED6F5200F079D4 /* queding@2x.png */; };
 		52C4C8BF16ED6F5200F079D4 /* sina-userphoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C4C8A716ED6F5200F079D4 /* sina-userphoto@2x.png */; };
@@ -329,6 +329,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5227864A16EEFB3D00EC3239 /* denglu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "denglu@2x.png"; sourceTree = "<group>"; };
+		5227864B16EEFB3D00EC3239 /* zhuce@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhuce@2x.png"; sourceTree = "<group>"; };
 		526BE92516E8414600D911C6 /* InvitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitViewController.m; sourceTree = "<group>"; };
 		526BE92716E8418D00D911C6 /* MyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDetailViewController.m; sourceTree = "<group>"; };
 		526BE92916E842F800D911C6 /* 4COMBORetinaIphone114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4COMBORetinaIphone114x114.png; sourceTree = "<group>"; };
@@ -352,8 +354,6 @@
 		52C4C8A016ED6F5200F079D4 /* ycomboregister@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ycomboregister@2x.png"; sourceTree = "<group>"; };
 		52C4C8A116ED6F5200F079D4 /* ycomboLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ycomboLogin@2x.png"; sourceTree = "<group>"; };
 		52C4C8A216ED6F5200F079D4 /* ycombologo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ycombologo@2x.png"; sourceTree = "<group>"; };
-		52C4C8A316ED6F5200F079D4 /* zhuce@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhuce@2x.png"; sourceTree = "<group>"; };
-		52C4C8A416ED6F5200F079D4 /* denglu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "denglu@2x.png"; sourceTree = "<group>"; };
 		52C4C8A516ED6F5200F079D4 /* quxiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quxiao@2x.png"; sourceTree = "<group>"; };
 		52C4C8A616ED6F5200F079D4 /* queding@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "queding@2x.png"; sourceTree = "<group>"; };
 		52C4C8A716ED6F5200F079D4 /* sina-userphoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina-userphoto@2x.png"; sourceTree = "<group>"; };
@@ -892,8 +892,8 @@
 				52C4C8A016ED6F5200F079D4 /* ycomboregister@2x.png */,
 				52C4C8A116ED6F5200F079D4 /* ycomboLogin@2x.png */,
 				52C4C8A216ED6F5200F079D4 /* ycombologo@2x.png */,
-				52C4C8A316ED6F5200F079D4 /* zhuce@2x.png */,
-				52C4C8A416ED6F5200F079D4 /* denglu@2x.png */,
+				5227864A16EEFB3D00EC3239 /* denglu@2x.png */,
+				5227864B16EEFB3D00EC3239 /* zhuce@2x.png */,
 				52C4C8A516ED6F5200F079D4 /* quxiao@2x.png */,
 				52C4C8A616ED6F5200F079D4 /* queding@2x.png */,
 				52C4C8A716ED6F5200F079D4 /* sina-userphoto@2x.png */,
@@ -1702,8 +1702,6 @@
 				52C4C8B816ED6F5200F079D4 /* ycomboregister@2x.png in Resources */,
 				52C4C8B916ED6F5200F079D4 /* ycomboLogin@2x.png in Resources */,
 				52C4C8BA16ED6F5200F079D4 /* ycombologo@2x.png in Resources */,
-				52C4C8BB16ED6F5200F079D4 /* zhuce@2x.png in Resources */,
-				52C4C8BC16ED6F5200F079D4 /* denglu@2x.png in Resources */,
 				52C4C8BD16ED6F5200F079D4 /* quxiao@2x.png in Resources */,
 				52C4C8BE16ED6F5200F079D4 /* queding@2x.png in Resources */,
 				52C4C8BF16ED6F5200F079D4 /* sina-userphoto@2x.png in Resources */,
@@ -1725,10 +1723,15 @@
 				52C4C8CF16ED6F5200F079D4 /* ycombopass@2x.png in Resources */,
 				DCA72FE016EEF5C90017E2B4 /* huodong@2x.png in Resources */,
 				DCA72FE116EEF5C90017E2B4 /* didian@2x.png in Resources */,
+<<<<<<< HEAD
 				9D59C51C16EEFC670095FF52 /* tab_feed.png in Resources */,
 				9D59C51D16EEFC670095FF52 /* tab_live.png in Resources */,
 				9D59C51E16EEFC670095FF52 /* tab_messages.png in Resources */,
 				9D59C51F16EEFC670095FF52 /* tab_feed_profile.png in Resources */,
+=======
+				5227864C16EEFB3D00EC3239 /* denglu@2x.png in Resources */,
+				5227864D16EEFB3D00EC3239 /* zhuce@2x.png in Resources */,
+>>>>>>> 郭-图片修改和CGrectmake
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
