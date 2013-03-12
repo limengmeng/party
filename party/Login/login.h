@@ -1,6 +1,6 @@
 //
 //  login.h
-//  resign
+//  resign1111
 //
 //  Created by mac bookpro on 1/26/13.
 //  Copyright (c) 2013 mac bookpro. All rights reserved.
